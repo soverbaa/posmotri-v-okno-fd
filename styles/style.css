@@ -12,6 +12,25 @@ body {
   position: relative;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -32,7 +51,6 @@ body {
   flex-direction: row;
   align-items: flex-end;
   width: 1140px;
-  height: 534px;
   gap: 30px;
 }
 
@@ -51,7 +69,6 @@ body {
   font-family: 'Oswald', Arial, sans-serif;
   font-size: 75px;
   font-weight: 700;
-  font-style: bold;
   line-height: 94%;
   text-transform: uppercase;
 }
@@ -64,12 +81,15 @@ body {
   overflow-y: auto;
   height: 298px;
   margin-top: 26px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .result__video-container {
   position: relative;
   margin-bottom: 16px;
-  height: 386px;
   width: 711px;
 }
 
@@ -103,48 +123,35 @@ body {
   gap: 30px;
 }
 
-
-.content__list-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
 .search-form__fieldset-title {
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-weight: 400;
-  height: 22px;
   font-size: 18px;
   line-height: 100%;
   font-style: normal;
   padding-bottom: 5px;
 }
 
-.content__card-link {
-  text-decoration: none;
-  color: white;
-}
-
 .content__video-card-title {
   font-family: 'Oswald', Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
-  font-style: bold;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100%;
+  max-width: 200px;
 }
 
 .content__video-card-description {
   line-height: 16.2px;
-  line-clamp: 3;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100%;
+  max-width: 200px;
 }
 
 .search-form__checkbox-list {
@@ -168,16 +175,14 @@ body {
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: 0%;
   font-size: 18px;
   font-style: normal;
-  height: 22px;
   width: 225px;
   color: #fff;
   background-color: transparent;
   border: none;
-  border-top: 1px solid rgb(255 255 255 / 0.7);
-  border-bottom: 1px solid rgb(255 255 255 / 0.7);
+  border-top: 1px solid rgb(255 255 255);
+  border-bottom: 1px solid rgb(255 255 255);
   appearance: none;
   outline: none;
   cursor: pointer;
@@ -219,12 +224,11 @@ body {
 .button {
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-weight: 700;
-  font-style: bold;
   font-size: 18px;
   line-height: 100%;
   color: #fff;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   gap: 20px;
   cursor: pointer;
 }
@@ -233,10 +237,6 @@ body {
   align-self: flex-end;
   width: 194px;
   height: 34px;
-}
-
-.search-form__submit-button:hover {
-  text-decoration: underline;
 }
 
 .more-button {
@@ -270,6 +270,8 @@ body {
 .content__card-link {
   display: block;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .content__card-link_current {
@@ -295,25 +297,6 @@ body {
 .content__list-item {
   padding-left: 3px;
   padding-right: 3px;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
 }
 
 /* Кастомный скроллбар */
